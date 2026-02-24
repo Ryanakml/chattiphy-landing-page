@@ -35,6 +35,8 @@ interface FAQ {
   isOpen: boolean;
 }
 
+const DASHBOARD_URL = 'https://chattiphy.nextstackhq.app/dashboard/overview';
+
 export default function LandingPage() {
   const [email, setEmail] = useState<string>('');
 
@@ -131,19 +133,20 @@ export default function LandingPage() {
     setFAQs((prev) => prev.map((faq) => (faq.id === id ? { ...faq, isOpen: !faq.isOpen } : faq)));
   };
 
+  const redirectToDashboard = (): void => {
+    window.location.assign(DASHBOARD_URL);
+  };
+
   const handleEmailSubmit = (): void => {
-    if (email.trim()) {
-      // Handle email subscription
-      setEmail('');
-    }
+    redirectToDashboard();
   };
 
   const handleGetStarted = (): void => {
-    // Handle get started action
+    redirectToDashboard();
   };
 
   const handleBookDemo = (): void => {
-    // Handle book demo action
+    redirectToDashboard();
   };
 
   return (
@@ -194,14 +197,16 @@ export default function LandingPage() {
               </div>
 
               {/* CTA */}
-              <div
+              <button
+                type="button"
+                onClick={handleGetStarted}
                 className="bg-background-accent-primary rounded-xl px-5 py-2 cursor-pointer"
                 style={{ boxShadow: '0 2px 12px rgba(107,63,160,0.30)' }}
               >
                 <span className="text-md font-medium leading-xl text-text-white whitespace-nowrap">
                   Start With Chat Agent
                 </span>
-              </div>
+              </button>
             </nav>
           </div>
 
