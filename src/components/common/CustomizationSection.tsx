@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import GradientBg from '../ui/GradientBg';
+import Image from 'next/image';
 
 type Tab = 'conversation' | 'visual';
 
@@ -37,7 +38,14 @@ function FeatureCard({
         </p>
       </div>
       <div className="flex-1 flex items-end justify-center overflow-hidden px-4 pb-0">
-        <img src={image} alt={alt} className={imageClassName} />
+        <Image
+          src={image}
+          alt={alt}
+          className={imageClassName}
+          width={332}
+          height={240}
+          sizes="(max-width: 1024px) 100vw, 332px"
+        />
       </div>
     </div>
   );
@@ -154,7 +162,7 @@ export default function CustomizationSection() {
                   <FeatureCard
                     title="Welcome Message"
                     description="Make a great first impression"
-                    image="images/wellcome_message.png"
+                    image="/images/wellcome_message.png"
                     alt="welcome message example"
                     imageClassName="w-[222px] h-auto mx-auto"
                   />
@@ -163,7 +171,7 @@ export default function CustomizationSection() {
                   <FeatureCard
                     title="Model Selection"
                     description="Choose the AI engine that fits your needs"
-                    image="images/model_selection.png"
+                    image="/images/model_selection.png"
                     alt="Model selection"
                     imageClassName="w-[228px] h-auto mx-auto"
                   />
@@ -250,7 +258,7 @@ export default function CustomizationSection() {
                   <FeatureCard
                     title="User Test Prompt"
                     description="Fine-tune responses to match your expectations"
-                    image="images/user_prompt.png"
+                    image="/images/user_prompt.png"
                     alt="user test prompt"
                     imageClassName="w-[218px] h-auto mx-auto"
                   />
@@ -259,7 +267,7 @@ export default function CustomizationSection() {
                   <FeatureCard
                     title="Source Document Management"
                     description="Manage knowledge sources"
-                    image="images/kb.png"
+                    image="/images/kb.png"
                     alt="source document management"
                     imageClassName="w-[213px] h-auto mx-auto"
                   />
@@ -298,7 +306,14 @@ export default function CustomizationSection() {
                       <p className="text-[15px] text-[#333] leading-[1.43]">{item.description}</p>
                     </div>
                     <div className="flex-1 flex items-end justify-center px-4 pb-0 overflow-hidden">
-                      <img src={item.image} alt={item.alt} className="w-full h-auto mt-auto" />
+                      <Image
+                        src={item.image}
+                        alt={item.alt}
+                        className="w-full h-auto mt-auto"
+                        width={560}
+                        height={320}
+                        sizes="(max-width: 1024px) 100vw, 560px"
+                      />
                     </div>
                   </div>
                 ))}

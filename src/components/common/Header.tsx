@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Button from '../ui/Button';
 import HeaderMenu from './HeaderMenu';
 import { twMerge } from 'tailwind-merge';
+import Image from 'next/image';
 
 interface HeaderProps {
   className?: string;
@@ -27,32 +28,40 @@ const Header = ({ className }: HeaderProps) => {
               </div>
 
               {/* Additional logo elements */}
-              <img
+              <Image
                 src="/images/img_vector_black_900_20x16.svg"
                 className="w-[16px] h-[20px] ml-[4px]"
                 alt="logo additional"
+                width={16}
+                height={20}
               />
 
               {/* Stack element with notification */}
               <div className="relative w-[16px] h-[16px] ml-[18px]">
                 <div className="absolute top-[6px] right-0 w-[54%] h-auto flex justify-end items-center">
-                  <img
+                  <Image
                     src="/images/img_vector_indigo_a100.svg"
                     className="w-[3px] h-[3px]"
                     alt="notification dot"
+                    width={3}
+                    height={3}
                   />
                 </div>
-                <img
+                <Image
                   src="/images/img_vector_black_900_16x16.svg"
                   className="absolute top-0 left-0 w-[16px] h-[16px]"
                   alt="notification icon"
+                  width={16}
+                  height={16}
                 />
               </div>
 
-              <img
+              <Image
                 src="/images/img_vector_black_900_20x8.svg"
                 className="w-[10px] h-[20px] ml-[19px]"
                 alt="final logo element"
+                width={10}
+                height={20}
               />
             </div>
           </div>

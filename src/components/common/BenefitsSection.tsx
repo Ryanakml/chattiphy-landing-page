@@ -1,5 +1,6 @@
 import Button from '../ui/Button';
 import GradientBg from '../ui/GradientBg';
+import Image from 'next/image';
 
 interface BenefitFeature {
   id: string;
@@ -39,10 +40,13 @@ export default function BenefitsSection({ features, onGetStarted }: BenefitsSect
                       {feature.description}
                     </p>
                   </div>
-                  <img
+                  <Image
                     src={feature.icon}
                     className="w-full h-auto max-w-[332px] mx-auto"
                     alt={feature.title}
+                    width={332}
+                    height={254}
+                    sizes="(max-width: 768px) 100vw, 332px"
                   />
                 </div>
               ))}

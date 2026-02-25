@@ -4,6 +4,7 @@ import { useRef, useState } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import GradientBg from '../ui/GradientBg';
+import Image from 'next/image';
 
 interface ResourceHighlight {
   label: string;
@@ -173,11 +174,13 @@ export default function TechnologySection() {
                       background: 'linear-gradient(135deg, #F5F3FF 0%, #EDE9FF 100%)',
                     }}
                   >
-                    <div className="tech-detail-anim w-full aspect-[16/9] my-auto">
-                      <img
+                    <div className="tech-detail-anim w-full aspect-[16/9] my-auto relative">
+                      <Image
                         src={selectedHighlight.image}
                         alt={selectedHighlight.label}
                         className="w-full h-full object-cover"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 62vw"
                       />
                     </div>
                   </div>

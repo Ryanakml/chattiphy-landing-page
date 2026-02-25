@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { twMerge } from 'tailwind-merge';
+import Image from 'next/image';
 
 interface HeaderSubMenuItemProps {
   text: string;
@@ -35,10 +36,12 @@ const HeaderSubMenuItem = ({
         )}
       >
         <span>{text}</span>
-        <img
+        <Image
           src="/images/img_arrow_down.svg"
           className={`w-[20px] h-[20px] transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
           alt="dropdown arrow"
+          width={20}
+          height={20}
         />
       </button>
 

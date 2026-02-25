@@ -5,6 +5,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import Button from '../ui/Button';
+import Image from 'next/image';
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
@@ -237,11 +238,13 @@ export default function HowItWorksSection({ onGetStarted }: HowItWorksSectionPro
                   border: '1px solid rgba(255,255,255,0.08)',
                 }}
               >
-                <img
+                <Image
                   key={howItWorksSteps[activeStep].image}
                   src={howItWorksSteps[activeStep].image}
                   alt={howItWorksSteps[activeStep].title}
                   className="howitworks-visual-anim absolute inset-0 w-full h-full object-contain p-6"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 58vw"
                 />
 
                 {/* Step label overlay di pojok image */}

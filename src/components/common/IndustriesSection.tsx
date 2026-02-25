@@ -5,6 +5,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import Button from '../ui/Button';
+import Image from 'next/image';
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
@@ -194,10 +195,12 @@ export default function IndustriesSection({ onGetStarted }: IndustriesSectionPro
             >
               {/* Image Side */}
               <div className="w-full md:w-1/2 relative bg-gray-800">
-                <img
+                <Image
                   src={active.image}
                   alt={active.label}
                   className="w-full h-full object-cover opacity-60 mix-blend-overlay"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-black/80 to-transparent">
                   <span className="industry-detail-anim bg-white/20 text-white/90 px-4 py-1.5 rounded-full text-xs font-medium w-fit mb-3 backdrop-blur-md">

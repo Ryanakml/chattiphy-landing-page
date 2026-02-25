@@ -174,10 +174,13 @@ export default function LandingPage() {
               }}
             >
               {/* Logo */}
-              <img
+              <Image
                 src="/images/logoipsum.svg"
                 className="w-[65px] sm:w-[90px] md:w-[110px] h-[28px]"
                 alt="logo"
+                width={110}
+                height={28}
+                sizes="(max-width: 640px) 65px, (max-width: 768px) 90px, 110px"
               />
 
               {/* Nav links */}
@@ -262,7 +265,13 @@ export default function LandingPage() {
 
                 {/* No Credit Card Required */}
                 <div className="flex justify-start items-center w-full">
-                  <img src="/images/img_image.svg" className="w-[24px] h-[24px]" alt="check icon" />
+                  <Image
+                    src="/images/img_image.svg"
+                    className="w-[24px] h-[24px]"
+                    alt="check icon"
+                    width={24}
+                    height={24}
+                  />
                   <span className="text-sm font-medium leading-base text-text-quaternary ml-2">
                     No credit card required
                   </span>
@@ -276,10 +285,13 @@ export default function LandingPage() {
         </div>
 
         {/* Bottom Wave Image */}
-        <img
+        <Image
           src="/images/img_image_pointer_events_none.png"
           className="w-full h-[50px] sm:h-[75px] md:h-[100px] object-cover -mt-[30px] sm:-mt-[45px] md:-mt-[60px]"
           alt="wave decoration"
+          width={1440}
+          height={100}
+          sizes="100vw"
         />
       </section>
 
@@ -313,10 +325,12 @@ export default function LandingPage() {
                       key={index}
                       className="flex gap-3 justify-start items-center w-full sm:w-auto"
                     >
-                      <img
+                      <Image
                         src={item.icon}
                         className="w-[24px] h-[24px] flex-shrink-0"
                         alt="feature icon"
+                        width={24}
+                        height={24}
                       />
                       <div className="flex flex-col justify-start items-start">
                         <span className="text-md font-semibold leading-xl text-text-white">
@@ -336,10 +350,12 @@ export default function LandingPage() {
               {/* Scroll Button */}
               {/* <div className="flex justify-end items-end w-full mb-8 sm:mb-12">
                 <div className="bg-background-dark-secondary rounded-3xl p-3">
-                  <img
+                  <Image
                     src="/images/img_image_js82deh.svg"
                     className="w-[32px] h-[32px]"
                     alt="scroll icon"
+                    width={32}
+                    height={32}
                   />
                 </div>
               </div> */}
@@ -352,11 +368,14 @@ export default function LandingPage() {
 
       {/* Speech Bot Section */}
       <section className="w-full bg-background-dark-primary relative overflow-hidden">
-        <img
+        <Image
           src="/images/img_image_absolute.png"
           className="absolute right-0 bottom-0 w-[220px] md:w-[420px] h-auto opacity-70 pointer-events-none"
           alt=""
           aria-hidden="true"
+          width={420}
+          height={420}
+          sizes="(max-width: 768px) 220px, 420px"
         />
         <div className="relative z-10 w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-24">
           <div className="w-full max-w-[1202px] mx-auto flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-12">
@@ -417,10 +436,13 @@ export default function LandingPage() {
             {/* Right: Image */}
             <div className="w-full lg:w-[55%] relative flex justify-center items-center">
               {/* Main avatar */}
-              <img
+              <Image
                 src="/images/img_image_rounded_xl.png"
                 className="relative z-10 w-full max-w-[450px] h-auto object-contain"
                 alt="Chattiphy AI Chat Agent"
+                width={450}
+                height={450}
+                sizes="(max-width: 1024px) 100vw, 450px"
               />
 
               {/* Chat bubble — diperbaiki jadi lebih product-demo feel */}
@@ -435,10 +457,12 @@ export default function LandingPage() {
               >
                 {/* User message */}
                 <div className="flex gap-2 items-center mb-3">
-                  <img
+                  <Image
                     src="/images/img_image_rounded_full.png"
                     className="w-[28px] h-[28px] rounded-full object-cover flex-shrink-0"
                     alt="user"
+                    width={28}
+                    height={28}
                   />
                   <span className="text-sm font-medium text-text-white-transparent">
                     What can Chattiphy do?
@@ -513,10 +537,12 @@ export default function LandingPage() {
               {/* Security Features Grid */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
                 <div className="bg-background-white border border-border-light rounded-2xl p-8 flex flex-col gap-4 hover:shadow-md transition-shadow duration-200">
-                  <img
+                  <Image
                     src="/images/img_image_size_14.png"
                     className="w-[44px] h-[44px]"
                     alt="encryption icon"
+                    width={44}
+                    height={44}
                   />
                   <div>
                     <h3 className="text-xl font-bold leading-5xl text-text-tertiary mb-2">
@@ -530,10 +556,12 @@ export default function LandingPage() {
                 </div>
 
                 <div className="bg-background-white border border-border-light rounded-2xl p-8 flex flex-col gap-4 hover:shadow-md transition-shadow duration-200">
-                  <img
+                  <Image
                     src="/images/img_image_size_14_56x52.png"
                     className="w-[44px] h-[44px]"
                     alt="isolation icon"
+                    width={44}
+                    height={44}
                   />
                   <div>
                     <h3 className="text-xl font-bold leading-5xl text-text-tertiary mb-2">
@@ -547,10 +575,12 @@ export default function LandingPage() {
                 </div>
 
                 <div className="bg-background-white border border-border-light rounded-2xl p-8 flex flex-col gap-4 hover:shadow-md transition-shadow duration-200">
-                  <img
+                  <Image
                     src="/images/img_vector_56x48.png"
                     className="w-[44px] h-[44px]"
                     alt="audit icon"
+                    width={44}
+                    height={44}
                   />
                   <div>
                     <h3 className="text-xl font-bold leading-5xl text-text-tertiary mb-2">
@@ -564,10 +594,12 @@ export default function LandingPage() {
                 </div>
 
                 <div className="bg-background-white border border-border-light rounded-2xl p-8 flex flex-col gap-4 hover:shadow-md transition-shadow duration-200">
-                  <img
+                  <Image
                     src="/images/img_image_size_14_white_a700.png"
                     className="w-[44px] h-[44px]"
                     alt="redaction icon"
+                    width={44}
+                    height={44}
                   />
                   <div>
                     <h3 className="text-xl font-bold leading-5xl text-text-tertiary mb-2">
@@ -581,10 +613,12 @@ export default function LandingPage() {
                 </div>
 
                 <div className="bg-background-white border border-border-light rounded-2xl p-8 flex flex-col gap-4 hover:shadow-md transition-shadow duration-200">
-                  <img
+                  <Image
                     src="/images/img_image_size_14_54x56.png"
                     className="w-[44px] h-[44px]"
                     alt="retention icon"
+                    width={44}
+                    height={44}
                   />
                   <div>
                     <h3 className="text-xl font-bold leading-5xl text-text-tertiary mb-2">
@@ -597,10 +631,12 @@ export default function LandingPage() {
                 </div>
 
                 <div className="bg-background-white border border-border-light rounded-2xl p-8 flex flex-col gap-4 hover:shadow-md transition-shadow duration-200">
-                  <img
+                  <Image
                     src="/images/img_image_size_14_white_a700_56x50.png"
                     className="w-[44px] h-[44px]"
                     alt="zero retention icon"
+                    width={44}
+                    height={44}
                   />
                   <div>
                     <h3 className="text-xl font-bold leading-5xl text-text-tertiary mb-2">
@@ -703,10 +739,12 @@ export default function LandingPage() {
 
                 {/* Reviewer info */}
                 <div className="flex items-center gap-3 pt-5 border-t border-border-light">
-                  <img
+                  <Image
                     src={testimonial.avatar}
                     className="w-[40px] h-[40px] rounded-full object-cover bg-gray-200"
                     alt={testimonial.name}
+                    width={40}
+                    height={40}
                   />
                   <div>
                     <h4 className="text-md font-medium leading-3xl text-text-tertiary">
@@ -783,10 +821,12 @@ export default function LandingPage() {
                       <span className="text-xl font-semibold leading-4xl text-text-tertiary">
                         {faq.question}
                       </span>
-                      <img
+                      <Image
                         src="/images/img_arrow_down.svg"
                         className={`w-[24px] h-[24px] transition-transform ${faq.isOpen ? 'rotate-180' : ''}`}
                         alt="expand icon"
+                        width={24}
+                        height={24}
                       />
                     </div>
                     {faq.isOpen && (
@@ -809,10 +849,12 @@ export default function LandingPage() {
                       <span className="text-xl font-semibold leading-4xl text-text-tertiary">
                         {faq.question}
                       </span>
-                      <img
+                      <Image
                         src="/images/img_arrow_down.svg"
                         className={`w-[24px] h-[24px] transition-transform ${faq.isOpen ? 'rotate-180' : ''}`}
                         alt="expand icon"
+                        width={24}
+                        height={24}
                       />
                     </div>
                     {faq.isOpen && (
@@ -926,36 +968,48 @@ export default function LandingPage() {
             <div className="flex flex-col lg:flex-row justify-between items-start gap-12 mb-12">
               {/* Logo & Social */}
               <div className="w-full lg:w-[16%]">
-                <img
+                <Image
                   src="/images/logoipsum.svg"
                   className="w-[122px] h-[38px] mb-8"
                   alt="footer logo"
+                  width={122}
+                  height={38}
                 />
                 <div className="flex gap-5 items-center">
-                  <img
+                  <Image
                     src="/images/img_vector_blue_gray_400.svg"
                     className="w-[8px] h-[16px]"
                     alt="social"
+                    width={8}
+                    height={16}
                   />
-                  <img
+                  <Image
                     src="/images/img_image_h_16px.svg"
                     className="w-[16px] h-[14px]"
                     alt="social"
+                    width={16}
+                    height={14}
                   />
-                  <img
+                  <Image
                     src="/images/img_image_h_16px_blue_gray_400.svg"
                     className="w-[14px] h-[16px]"
                     alt="social"
+                    width={14}
+                    height={16}
                   />
-                  <img
+                  <Image
                     src="/images/img_image_h_16px_indigo_a100.svg"
                     className="w-[16px] h-[16px]"
                     alt="social"
+                    width={16}
+                    height={16}
                   />
-                  <img
+                  <Image
                     src="/images/img_vector_blue_gray_400_16x12.svg"
                     className="w-[12px] h-[16px]"
                     alt="social"
+                    width={12}
+                    height={16}
                   />
                 </div>
               </div>
@@ -1032,10 +1086,12 @@ export default function LandingPage() {
                   </h3>
                   <div className="space-y-6">
                     <div className="flex gap-3 items-start">
-                      <img
+                      <Image
                         src="/images/img_image_indigo_a100_38x38.svg"
                         className="w-[38px] h-[38px]"
                         alt="email"
+                        width={38}
+                        height={38}
                       />
                       <div>
                         <p className="text-sm font-normal leading-base text-text-quaternary">
@@ -1047,10 +1103,12 @@ export default function LandingPage() {
                       </div>
                     </div>
                     <div className="flex gap-3 items-center">
-                      <img
+                      <Image
                         src="/images/img_image_38x38.svg"
                         className="w-[38px] h-[38px]"
                         alt="phone"
+                        width={38}
+                        height={38}
                       />
                       <div>
                         <p className="text-sm font-normal leading-base text-text-quaternary">
@@ -1062,10 +1120,12 @@ export default function LandingPage() {
                       </div>
                     </div>
                     <div className="flex gap-3 items-start">
-                      <img
+                      <Image
                         src="/images/img_image_1.svg"
                         className="w-[38px] h-[38px]"
                         alt="address"
+                        width={38}
+                        height={38}
                       />
                       <div>
                         <p className="text-sm font-normal leading-base text-text-quaternary mb-1">
@@ -1094,10 +1154,13 @@ export default function LandingPage() {
         </div>
 
         {/* Final Footer Image - Diperbaiki */}
-        <img
+        <Image
           src="/images/img_image_160x1438.png"
           className="w-full max-w-[1440px] mx-auto h-auto object-contain mt-12 px-4 sm:px-6 lg:px-8"
           alt="LET'S WORK TOGETHER"
+          width={1438}
+          height={160}
+          sizes="100vw"
         />
       </footer>
     </main>
