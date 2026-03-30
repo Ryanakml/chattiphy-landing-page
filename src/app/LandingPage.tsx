@@ -362,7 +362,6 @@ export default function LandingPage() {
             </div>
           </div>
         </section>
-
         <BenefitsSection features={features} onGetStarted={handleGetStarted} />
       </div>
 
@@ -506,7 +505,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <TechnologySection />
+      {/* <TechnologySection /> */}
 
       <HowItWorksSection onGetStarted={handleGetStarted} />
 
